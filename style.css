@@ -1,0 +1,466 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    /* background-color: #f4f4f4; */ /* Removed for darker theme */ 
+    color: #ccc; /* Lighter text for dark background */
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.container {
+    /* background-color: #fff; */
+    background-color: #444; /* Darker container */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Adjusted shadow for dark theme */
+    width: 80%;
+    max-width: 900px; /* Max width can be adjusted based on number of heroes */
+    position: relative; /* 添加此行以允许拖动 */
+    cursor: grab; /* 添加此行以指示可拖动 */
+}
+
+h1 {
+    text-align: center;
+    /* color: #555; */
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+/* 阵容显示区域 */
+.lineup-display {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.lineup-display h2 {
+    visibility: hidden;
+     margin: 0px;
+     font-size: 18px;
+}
+
+.lineup-display:has(.hero-avatar:hover) h2 {
+    visibility: visible;
+}
+
+.heroes-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping, allow horizontal scroll if needed */
+    gap: 10px; /* Gap between hero cards */
+    justify-content: flex-start; /* Align heroes to the start */
+    padding-bottom: 10px; /* Space for potential scrollbar or just visual */
+    /* overflow-x: auto; */ /* Uncomment if explicit horizontal scroll is desired */
+}
+
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: auto; /* Width will be determined by content like avatar */
+    flex-shrink: 0; /* Prevent shrinking in flex container */
+}
+
+.hero-stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4px; /* Space between stars and avatar area */
+    height: 16px; /* Approximate height for stars */
+}
+
+.star-icon {
+    /* width: 16px; */ /* Adjust as needed */
+    /* height: 16px; */
+    /* background-image: url('//game.gtimg.cn/images/lol/tft/content-site/sprite-img.webp'); */ /* Placeholder sprite */
+    /* background-repeat: no-repeat; */
+    /* background-position: X Y; */ /* Needs specific position for star from sprite */
+    /* background-size: auto; */ /* Or specific size of the sprite sheet if needed */
+    /* margin: 0 1px; */
+    /* Example placeholder - make it visible if sprite isn't set up */
+    /* background-color: gold; 
+    border-radius: 50%; */
+    color: gold; /* Or your desired star color */
+    font-size: 16px; /* Adjust size as needed */
+    margin: 0 1px; /* Keep margin for spacing */
+    line-height: 1; /* Ensure proper vertical alignment */
+}
+
+.hero-main-info {
+    display: flex;
+    align-items: center; /* Vertically align indicators and avatar initially */
+    position: relative; /* For positioning child elements like avatar and indicators */
+}
+
+.hero-indicators-left {
+    position: absolute; /* Position indicators on top of the avatar */
+    left: -5px; /* Adjust for slight overlap or positioning from the left edge of avatar */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure indicators are above the avatar */
+    display: flex;
+    flex-direction: column; /* Stack indicators vertically */
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px; /* User set this, okay with absolute positioning */
+    gap: 5px; /* Space between indicators if there are multiple */
+}
+
+.carry-hero-indicator {
+    width: 28px; /* Adjust size of hexagon */
+    height: 32px;
+    /* background-color: #ff8c00; */ /* Orange color like in image - Replaced by image */
+    background-image: url('icon-carry-hero.webp');
+    background-size: contain; /* Or cover, adjust as needed */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent; /* Hide any text content */
+    font-size: 0; /* Ensure text C is not visible */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    /* border: 1px solid darkorange; */ /* Optional border */
+    /* No absolute positioning, flows with flex */
+}
+
+.vanguard-hero-indicator {
+    width: 28px; /* Match carry indicator size */
+    height: 32px;
+    background-image: url('icon-vanguard.png'); /* Your vanguard icon */
+    background-size: contain; /* Ensure the icon fits without cropping */
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    /* No text content needed as image is background */
+}
+
+.plus-indicator {
+    width: 28px; /* 与其他指示器大小一致 */
+    height: 32px;
+    background-image: url('icon-plus.png'); /* 请确保您有这个图片文件 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* 六边形裁剪 */
+}
+
+/* Placeholder for a second indicator if needed */
+/* .second-indicator {
+    width: 28px; 
+    height: 32px;
+    background-color: #somecolor;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} */
+
+.hero-avatar {
+    width: 70px; /* Adjust avatar size as per image */
+    height: 70px;
+    background-color: #555; /* Placeholder if image fails */
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #777; /* Border around avatar like in image */
+    position: relative; /* Needed if other elements inside avatar are absolutely positioned, or for z-index context */
+    z-index: 1; /* Ensure avatar is below indicators */
+}
+
+.hero-name {
+    display: none; /* Hide hero name */
+}
+
+.hero-items {
+    display: flex;
+    justify-content: center;
+    gap: 2px; /* Reduced gap for smaller items */
+    margin-top: 4px; /* Space above items */
+    height: 20px; /* Fixed height for item row */
+}
+
+.item-icon {
+    width: 20px; /* Adjust item icon size */
+    height: 20px;
+    background-image: url('//game.gtimg.cn/images/lol/tft/content-site/sprite-img.png?2025_5_12_10_17_31');
+    background-repeat: no-repeat;
+    /* background-size: 3.7rem 3.38rem; */ /* This is very large, likely refers to whole sheet */
+    background-size: 100% 100%; /* Let default size or specific item crop dictate */
+    /* background-position: X Y; */ /* Crucial: Needs specific X Y for each item */
+    border-radius: 3px; /* Slightly rounded corners for items */
+    /* background-color: #666; */ /* Placeholder if sprite part is not visible */
+}
+
+/* Expandable Area - simplified for dark theme */
+.expandable-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#expand-button {
+    padding: 10px 15px;
+    background-color: #555;
+    color: #eee;
+    border: 1px solid #666;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+#expand-button:hover {
+    background-color: #666;
+}
+
+#all-lineups-container {
+    border: 1px solid #555;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+}
+
+.lineup-option {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #4a4a4a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #ccc;
+}
+
+.lineup-option:hover {
+    background-color: #5a5a5a;
+}
+
+.lineup-option.selected-option {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .hero-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .item-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .carry-hero-indicator {
+        width: 24px;
+        height: 28px;
+        font-size: 12px;
+    }
+    .star-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    .item-icon {
+        width: 16px;
+        height: 16px;
+    }
+    .carry-hero-indicator {
+        width: 20px;
+        height: 24px;
+        font-size: 10px;
+    }
+    .star-icon {
+        width: 12px;
+        height: 12px;
+    }
+     .heroes-grid {
+        gap: 5px; /* Smaller gap on very small screens */
+    }
+} 
+.clickable-lineup-card {
+    /* 缩放到100% */ 
+    padding: 10px;
+    cursor: pointer; /* 这会将鼠标指针变为手形 */
+    /* 你可以定义一个默认的背景色，如果需要的话 */
+    /* background-color: #f9f9f9; */
+    display: flex; /* 使按钮和内容区域水平排列 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 15px; /* 按钮和内容区域之间的间距 */
+}
+.clickable-lineup-card h3 {
+    margin: 0px;
+    font-size: 18px;
+}
+
+.clickable-lineup-card:hover {
+    border-color: #007bff; /* 鼠标悬停时改变边框颜色 (可选) */
+    background-color: rgba(0, 0, 0, 0.5); /* 鼠标悬停时改变背景颜色 */
+}
+
+.lineup-display-card h3{
+    margin: 0px;
+    font-size: 18px;
+
+}
+
+/* 包含按钮和选中阵容的容器 */
+.lineup-controls-and-display {
+    display: flex;
+    align-items: center; /* 改为 center 使按钮和阵容垂直居中 */
+    gap: 20px;          /* 按钮和阵容之间的间距 */
+    margin-bottom: 20px; /* 与下方阵容列表的间距 */
+}
+
+/* 阵容切换按钮 */
+#toggle-all-lineups-button {
+    width: 65px;             /* 按钮宽度，可以根据需要调整 */
+    height: 65px;            /* 按钮高度，使其为正方形以形成完美圆形 */
+    border-radius: 50%;      /* 设置为圆形 */
+    background-color: #404040; /* 深灰色背景，与图片背景协调 */
+    color: #e0e0e0;          /* 浅色文字/图标 */
+    border: none;            /* 移除边框，使其更扁平化 */
+    font-size: 14px;         /* 字体大小，确保 "阵容 ▾" 能容纳 */
+    cursor: pointer;
+    display: flex;           /* 使用 flex 来居中内容 */
+    justify-content: center; /* 水平居中按钮内的文本和图标 */
+    align-items: center;     /* 垂直居中按钮内的文本和图标 */
+    text-align: center;      /* 确保文本本身是居中的 */
+    padding: 5px;            /* 轻微内边距 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* 添加细微阴影增加立体感 */
+    transition: background-color 0.2s ease, transform 0.15s ease; /* 平滑过渡效果 */
+    flex-shrink: 0;          /* 防止按钮在 flex 容器中被压缩 */
+}
+
+#toggle-all-lineups-button:hover {
+    background-color: #505050; /* 鼠标悬停时颜色变亮一些 */
+    transform: translateY(-2px) scale(1.05); /* 轻微上浮和放大效果 */
+}
+
+#toggle-all-lineups-button:active {
+    background-color: #303030; /* 点击时颜色变深一些 */
+    transform: translateY(0px) scale(1); /* 恢复原始状态 */
+}
+
+/* 默认选中的阵容容器 */
+#selected-lineup-container {
+    flex-grow: 1; /* 占据剩余空间 */
+    background-color: #333; /* 示例背景色，使其可见 */
+    padding: 15px; /* 示例内边距 */
+    border-radius: 8px; /* 轻微圆角 */
+     /* 你可能需要根据实际内容和设计调整这里的样式 */
+}
+
+/* 为了确保按钮内的文本（例如 "阵容 ▼"）能够正确显示，
+   如果出现换行问题，你可能需要调整按钮的 width/height 或 font-size。
+   目前的 JavaScript 会将 "阵容" 和图标放在同一行。
+*/
+
+/* (可选) 如果你想让 "阵容" 和图标垂直堆叠，
+   你需要修改 script.js 中设置 innerHTML 的部分，例如：
+   toggleAllLineupsButton.innerHTML = '阵容<br>&blacktriangledown;';
+   或者使用 flexbox 并在按钮上设置 flex-direction: column，但这需要将文本和图标包裹在不同的 span 元素中。
+   不过，根据图片中的小预览按钮，文本和图标是在一行的。
+*/
+
+/* 新添加的卡片头部样式 */
+.lineup-card-header {
+    /* display: flex; */ /* 不再需要，因为按钮已移出 */
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 10px; /* 头部和英雄网格之间的间距 */
+}
+
+.lineup-card-header h3 {
+    margin: 0; /* 移除标题的默认外边距 */
+    font-size: 1em; /* 根据需要调整标题字体大小 */
+}
+
+/* 新添加的 "+" 按钮样式 */
+.lineup-plus-button {
+    /* background-color: #5cb85c; */ /* 示例绿色背景 - 将被覆盖 */
+    /* color: white; */
+    /* border: none; */
+    /* border-radius: 50%; */ /* 圆形按钮 */
+    /* width: 24px; */
+    /* height: 24px; */
+    /* font-size: 16px; */
+    /* font-weight: bold; */
+    /* line-height: 22px; */ /* 微调使 "+" 居中 */
+    /* text-align: center; */
+    /* cursor: pointer; */
+    /* padding: 0; */
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.2); */
+    /* transition: background-color 0.2s ease; */
+
+    /* 与 #toggle-all-lineups-button 样式保持一致 */
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #404040; /* 与阵容按钮一致的深灰色背景 */
+    color: #e0e0e0;
+    border: none;
+    font-size: 24px; /* 调整加号大小 */
+    font-weight: bold;
+    line-height: 60px; /* 调整使加号垂直居中 */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0; /* 移除内边距，因为已通过 line-height 和 flex 居中 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    flex-shrink: 0; /* 防止按钮在 flex 容器中被压缩 */
+}
+
+.lineup-plus-button:hover {
+    /* background-color: #4cae4c; */
+    background-color: #505050; /* 与阵容按钮一致 */
+    transform: translateY(-2px) scale(1.05);
+}
+
+.lineup-plus-button:active {
+    /* background-color: #3e8e3e; */
+    background-color: #303030; /* 与阵容按钮一致 */
+    transform: translateY(0px) scale(1);
+}
+
+/* 新增 lineup-content-wrapper 样式 */
+.lineup-content-wrapper {
+    flex-grow: 1; /* 占据剩余空间 */
+    display: flex;
+    flex-direction: column;
+    /* 如果需要，可以添加 padding-left 来与按钮隔开 */
+    /* padding-left: 15px; */ 
+}
+
+.clickable-lineup-card {
+    /* 缩放到100% */ 
+    padding: 10px;
+    cursor: pointer; /* 这会将鼠标指针变为手形 */
+    /* 你可以定义一个默认的背景色，如果需要的话 */
+    /* background-color: #f9f9f9; */
+    display: flex; /* 使按钮和内容区域水平排列 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 15px; /* 按钮和内容区域之间的间距 */
+}
+
+.lineup-plus-button {
+    display: none;
+}

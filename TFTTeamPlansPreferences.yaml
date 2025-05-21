@@ -1,0 +1,395 @@
+team-data:
+    data:
+        eventSetLastViewed: false
+        hasViewedTeamPlanner: true
+        previouslyUsedContext:
+            optionalTeamId: "11a3fcf9-4001-46ec-8530-60471a5f5e80"
+            setId: "TFTSet14"
+            sortOption: 0
+            viewId: 2
+        remindersEnabled: true
+        teamMap:
+            TFTSet14:
+                remindedTeamId: "11a3fcf9-4001-46ec-8530-60471a5f5e80"
+                teams:
+                -   champions:
+                    -   championId: "TFT14_Jax"
+                    -   championId: "TFT14_Jhin"
+                    -   championId: ""
+                    -   championId: "TFT14_Mordekaiser"
+                    -   championId: "TFT14_Varus"
+                    -   championId: "TFT14_Sejuani"
+                    -   championId: "TFT14_Vex"
+                    -   championId: "TFT14_Aurora"
+                    -   championId: "TFT14_Gragas"
+                    -   championId: "TFT14_Viego"
+                    editedByPlayer: false
+                    id: "11a3fcf9-4001-46ec-8530-60471a5f5e80"
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 1745766188348
+                    timeOfLastReminderToggleInMs: 1745766188348
+                    timeOfLastViewInMs: 1747671242222
+                    title: "\u65B0\u5EFA\u5C0F\u961F (2)"
+                -   champions:
+                    -   championId: "TFT14_Ekko"
+                    -   championId: "TFT14_LeBlanc"
+                    -   championId: "TFT14_Yuumi"
+                    -   championId: "TFT14_Neeko"
+                    -   championId: "TFT14_Ziggs"
+                    -   championId: "TFT14_Annie"
+                    -   championId: "TFT14_Kobuko"
+                    -   championId: "TFT14_Samira"
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: "e1ef56f1-01df-4397-981e-f07f631787cf"
+                    shownNewTeamAnim: true
+                    teamIsImported: false
+                    timeOfCreationInMs: 1744113186924
+                    timeOfLastReminderToggleInMs: 1744113186924
+                    timeOfLastViewInMs: 1745766187014
+                    title: "\u65B0\u5EFA\u5C0F\u961F"
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+                -   champions:
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    -   championId: ""
+                    editedByPlayer: false
+                    id: ""
+                    shownNewTeamAnim: false
+                    teamIsImported: false
+                    timeOfCreationInMs: 0
+                    timeOfLastReminderToggleInMs: 1745766614760
+                    timeOfLastViewInMs: 0
+                    title: ""
+    schemaVersion: 3
